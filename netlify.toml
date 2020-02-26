@@ -1,3 +1,6 @@
 [build]
   publish ="_site"
   functions = "functions"
+
+  # build command.
+  command = "printf 'repo: %s' '$REPOSITORY_URL' > _data/netlify_build_env_vars.yml; jekyll build"
