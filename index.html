@@ -17,8 +17,10 @@ title: "Home Page"
     </div>
 
 
-here it is: {{ site.data.netlify_build_env_vars.repo }}
 
+here it is filtered: {{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }}
+<br />
+un filtered: {{ site.data.netlify_build_env_vars.repo }}
 
 
 </div>
