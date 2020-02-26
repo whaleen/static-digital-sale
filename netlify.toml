@@ -1,5 +1,4 @@
 [build]
   publish ="_site/"
-
   # build command.
-  # command = "printf 'repo: %s' '$REPOSITORY_URL' > _data/netlify_build_env_vars.yml; jekyll build"
+  command = 'printf "repo: %s" "$REPOSITORY_URL" > _data/netlify_build_env_vars.yml; jekyll build'
