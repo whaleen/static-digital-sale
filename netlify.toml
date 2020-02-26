@@ -1,4 +1,4 @@
 [build]
   publish ="_site/"
-  # build command.
+  # build command. adds environmental variables to a yml file on build 
   command = 'printf "repo: %s" "$REPOSITORY_URL" > _data/netlify_build_env_vars.yml; jekyll build'
