@@ -13,7 +13,7 @@ title: "Home Page"
     <p class="">All you need to get started is a GitHub account! </p>
     <div class="pb-5">
         <a class="" href="https://app.netlify.com/start/deploy?repository=https://github.com/whaleen/static-digital-sale"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
-        <a href="https://app.forestry.io/quick-start?repo=jvaage/static-digital-sale&engine=jekyll"><img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" /></a>
+        <a href="https://app.forestry.io/quick-start?repo={{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }}&engine=jekyll"><img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" /></a>
     </div>
 
 
