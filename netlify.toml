@@ -1,8 +1,8 @@
-[build]
-  publish ="_site/"
-  # build command. adds environmental variables to a yml file on build
+[build]  
+  # build command adds environmental variables to a yml file on build
   command = 'printf "repo: %s" "$REPOSITORY_URL" > _data/netlify_build_env_vars.yml; jekyll build'
 
+  publish ="_site/"
   # Use the following format to write multiple items on seperate lines
   # https://docs.netlify.com/configure-builds/environment-variables/#deploy-urls-and-metadata
   # printf "repo: $test\nfun: $time"> _data/netlify_build_env_vars.yml;
