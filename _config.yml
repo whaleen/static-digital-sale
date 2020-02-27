@@ -1,6 +1,7 @@
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "static-digital-sale" # the name of your site, e.g. ACME Corp.
+title: "Digital Product" # the name of your site, e.g. ACME Corp.
+description: "A Jekyll template with support for Forestry CMS, Netlify Hosting, and Snipcart eCommerce functionality"
 
 collections:
   products:
