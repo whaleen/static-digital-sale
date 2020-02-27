@@ -6,75 +6,83 @@ title: "Home Page"
 <!-- Begin product content -->
 {% for product in site.products %}
 
-<div class="bg-light text-white mb-5">
-<div class="container  text-dark">
+<div class="bg-danger text-white mb-5">
+<div class="container">
     <h1 class="pb-5 pt-5">{{ site.title }}</h1>
-    <p class="">Support for digital sales from Snipcart. Hosting by Netlify. CMS by Forestry. SSG by Jekyll.</p>
+    <h2 class="lead">
+      A single product template. It could be an eBook, PDF, a Song, or any other file that you want to sell.
+    </h2>
+    <h3 class="lead">Support for eCommerce with Snipcart. Static Site Generation by Jekyll. Optional Hosting with Netlify and CMS by Forestry. </h3>
     <p class="">All you need to get started is a GitHub account! </p>
     <div class="pb-5">
-        <a class="" href="https://app.netlify.com/start/deploy?repository=https://github.com/whaleen/static-digital-sale"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+        <!-- <a class="" href="https://app.netlify.com/start/deploy?repository=https://github.com/whaleen/static-digital-sale"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a> -->
+        <!-- forestry build url useless as it clones  new repo to authorized user... damn -->
         <a href="https://app.forestry.io/quick-start?repo={{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }}&engine=jekyll"><img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" /></a>
     </div>
-
-
-
-here it is filtered: {{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }}
-<br />
-un filtered: {{ site.data.netlify_build_env_vars.repo }}
-
-
+          <!-- Test content -->
+          <!-- here it is filtered: {{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }} -->
+          <br />
+          <!-- un filtered: {{ site.data.netlify_build_env_vars.repo }} -->
+</div>
 </div>
 
 
 
-</div>
-
+<!-- Main content area -->
 <div class="container">
-
     <div class="row">
+
       <div class="col-sm">
-        <img class="img-fluid rounded shadow" src="{{ product.featured_image }}" />
+        <!-- Product image column -->
+        <img class="img-fluid" src="{{ product.featured_image }}" />
       </div>
 
       <div class="col-sm">
-          Ebook
+        <!-- Product details column -->
         <h1 class="mt-5">{{ product.title }}</h1>
         <p class="">$ {{ product.price }}</p>
         <p class="">{{ product.description }}</p>
-
-
-    <button class="snipcart-add-item btn btn-dark"
-    data-item-id="{{ product.title | slugify }}"
-    data-item-price="{{ product.price }}"
-    data-item-url="{{ site.url }}{{ product.url }}"
-    data-item-description="{{ product.description }}"
-    data-item-image="{{ site.url }}{{ product.featured_image }}"
-    data-item-name="{{ product.title }}"
-    data-item-file-guid=""
-    >
-    Add to cart
-  </button>
-
+          <button class="snipcart-add-item btn btn-dark"
+          data-item-id="{{ product.title | slugify }}"
+          data-item-price="{{ product.price }}"
+          data-item-url="{{ site.url }}{{ product.url }}"
+          data-item-description="{{ product.description }}"
+          data-item-image="{{ site.url }}{{ product.featured_image }}"
+          data-item-name="{{ product.title }}"
+          data-item-file-guid=""
+          >
+          Add to cart
+        </button>
       </div>
-    </div>
-  </div>
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+
+
 
 
 <div class="bg-light text-dark">
-    <div class="container">
-    <p>Be logged into Github.<br>
-      Deploy to Netlify. If you don't have a Netlify account you can create one using your GitHub account. <br>
-      Snipcart account required.
+    <div class="container py-4 mt-5 text-danger">
+      <h1 class="text-uppercase">Getting Started</h1>
+        <p>
+          Nerds may wish to just grab the repo and go from there.
+        </p>
 
-    </p>
-</div>
-</div>
+        <p>
+          Deploy to Netlify. If you don't have a Netlify account you can create one using your GitHub account. <br>
+          Snipcart account required.
+        </p>
 
-  <footer class="footer">
-    <div class="container">
-      <span class="text-muted">{{ site.title }}</span>
+
+      </p>
     </div>
-  </footer>
+</div>
+
+<footer class="footer bg-dark text-white">
+  <div class="container">
+    <span class="">{{ site.title }}</span>
+  </div>
+</footer>
 
 
 
