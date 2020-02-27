@@ -1,6 +1,6 @@
 [build]  
   # build command adds environmental variables to a yml file on build
-  command = 'printf "repo: %s" "$REPOSITORY_URL" > _data/netlify_build_env_vars.yml; jekyll build'
+  command = 'printf "repo: %s" "$REPOSITORY_URL" > _data/netlify_build_env_vars.yml; curl https://api.github.com/users/whaleen/repos -o _data/repos.json; jekyll build'
 
   publish ="_site/"
   # Use the following format to write multiple items on seperate lines
