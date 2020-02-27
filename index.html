@@ -17,7 +17,8 @@ title: "Home Page"
     <div class="pb-5">
         <!-- <a class="" href="https://app.netlify.com/start/deploy?repository=https://github.com/whaleen/static-digital-sale"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a> -->
         <!-- forestry build url useless as it clones  new repo to authorized user... damn -->
-        <a href="https://app.forestry.io/quick-start?repo={{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }}&engine=jekyll"><img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" /></a>
+        <a class="btn btn-black">Get Started</a>
+        <!-- <a href="https://app.forestry.io/quick-start?repo={{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }}&engine=jekyll"><img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" /></a> -->
     </div>
           <!-- Test content -->
           <!-- here it is filtered: {{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }} -->
@@ -42,7 +43,7 @@ title: "Home Page"
         <h1 class="mt-5">{{ product.title }}</h1>
         <p class="">$ {{ product.price }}</p>
         <p class="">{{ product.description }}</p>
-          <button class="snipcart-add-item btn btn-dark"
+          <button class="snipcart-add-item btn btn-black text-white"
           data-item-id="{{ product.title | slugify }}"
           data-item-price="{{ product.price }}"
           data-item-url="{{ site.url }}{{ product.url }}"
@@ -69,7 +70,10 @@ title: "Home Page"
         </p>
 
         <p>
+          <a href="https://app.forestry.io/quick-start?repo={{ site.data.netlify_build_env_vars.repo | replace: "https://github.com/", "" | replace: "git@github.com:", "" }}&engine=jekyll"><img alt="Import this project into Forestry" src="https://assets.forestry.io/import-to-forestryK.svg" /></a>
           Deploy to Netlify. If you don't have a Netlify account you can create one using your GitHub account. <br>
+          <!-- Place this tag where you want the button to render. -->
+          <a class="github-button" href="https://github.com/whaleem/static-digital-sale/generate" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Use this template ntkme/github-buttons on GitHub">Use this template</a>
           Snipcart account required.
         </p>
 
